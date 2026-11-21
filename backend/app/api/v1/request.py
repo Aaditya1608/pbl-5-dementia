@@ -26,7 +26,7 @@ def create_request(
     return caregiver_request(db=db,payload=payload,current_user=current_user)
 
 @router.get(
-    "/patients",
+    "/incoming",
     response_model=list[PatientResponses],
     status_code=status.HTTP_200_OK
 )
@@ -80,7 +80,4 @@ def get_patients(
     db: Session = Depends(get_db),
     current_user: User = Depends(require_role("CAREGIVER"))
 ):
-    return get_patient_records(
-        db=db,
-        current_user=current_user
-    )
+    return get_patient_records(db=db, current_user=current_user)
