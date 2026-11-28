@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CameraApp</string>
+
+    <string-array name="role">
+        <item>Select a role</item>
+        <item>Patient</item>
+        <item>Caregiver</item>
+    </string-array>
+</resources>

@@ -26,7 +26,7 @@ def get_patient_records(db: Session, current_user: User) -> list[PatientRecord]:
     return [
         PatientRecord(
             id=patient.id,
-            full_name=patient.user.full_name,
+            full_name=patient.full_name,
             dob=patient.dob,
             email=patient.user.email
         )
